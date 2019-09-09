@@ -2,11 +2,18 @@ spring:
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/shared
+#        native:
+#          search-locations: classpath:/shared
+        git:
+          uri: https://github.com/lixiaoming0314/HelloConfig/tree/master
+          search-paths: src
+          username: 287907160@qq.com
+          password: li19880314
 
-  profiles:
-    active: native
+      label: master
+
+#  profiles:
+#    active: native
 
   application:
     name: config-server
